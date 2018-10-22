@@ -2,18 +2,18 @@ import React, {Component} from 'react';
 
 export default class Login extends Component {
   state = {
-    username: "tom",
-    password: null,
+    username: "",
+    password: "",
     keepLoggedIn: false
   }
+  
   render() {
     return (
       <form>
-        <input type="text" value={this.state.username} />
-        <input type="password" value={this.state.password} />
-        <input type="checkbox" checked={this.state.keepLoggedIn} />
-        <button type="submit">Login</button>
-        
+        <input type="text" name="username" value={this.state.username}/>
+        <input type="password" name="password" value={this.state.password}/>
+        <input type="checkbox" name="keepLoggedIn" checked={this.state.keepLoggedIn}/>
+        <input type="submit" value="Log In" />
       </form>
     )
   }
