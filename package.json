@@ -1,8 +1,9 @@
 {
   "name": "login-react-redux-thunk-express",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "express": "^4.16.4",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5"
@@ -21,5 +22,16 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [
+    "react",
+    "redux",
+    "thunk",
+    "express"
+  ],
+  "author": "Tom Claudio",
+  "license": "ISC"
 }
