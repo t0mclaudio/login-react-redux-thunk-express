@@ -9,8 +9,11 @@ class App extends Component {
   }
 
   handleChange(e) {
-    console.log(e.target.name)
-    console.log(e.target.value)
+    this.props.dispatch({
+      type: "CHANGE", 
+      name: e.target.name, 
+      value: e.target.value
+    })
   }
 
   handleLogOut () {
