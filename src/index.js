@@ -4,8 +4,6 @@ import App from './App';
 import { createStore }  from 'redux';
 import { Provider } from "react-redux";
 
-const store = createStore(reducer);
-
 const initialState = {
   username: "",
   password: "",
@@ -14,8 +12,11 @@ const initialState = {
 }
 
 function reducer(state=initialState, action) {
+  console.log(state)
   return state;
 }
+
+const store = createStore(reducer);
 
 const Application = () => {
   return (
