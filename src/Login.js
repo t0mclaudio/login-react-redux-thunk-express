@@ -19,7 +19,7 @@ export default class Login extends Component {
           <input type="password" name="password" value={this.state.password} onChange={e => this.setState({password: e.target.value})}/>
         </div>
         <div>  
-          <input type="checkbox" name="keepLoggedIn" checked={this.state.keepLoggedIn} onChange={e => this.setState({keepLoggedIn: !this.state.keepLoggedIn})}/>
+          <input type="checkbox" name="keepLoggedIn" id="keepLoggedIn" checked={this.state.keepLoggedIn} onChange={e => this.setState({keepLoggedIn: !this.state.keepLoggedIn})}/>
           <label for="keepLoggedIn">Keep Logged in</label>
         </div>
         <div>
