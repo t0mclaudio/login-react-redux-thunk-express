@@ -12,12 +12,16 @@ class App extends Component {
     this.setState({isAuthenticated: false})
   }
 
+  handleLogIn() {
+    console.log("I've been clicked")
+  }
+
   render() {
     return (
       <div className="App">
         {this.state.isAuthenticated ? 
         <Profile handleLogOut={e => this.handleLogOut()} /> : 
-        <Login /> }
+        <Login data={this.props} handleLogIn={data => this.handleLogIn(data) } /> }
       </div>
     );
   }
