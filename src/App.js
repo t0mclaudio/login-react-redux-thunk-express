@@ -24,7 +24,10 @@ class App extends Component {
 }
 
 const MapPropsToState = state => ({
-  data: state.data
+  username: state.username,
+  password: state.password,
+  keepLoggedIn: state.keepLoggedIn,
+  isAuthenticated: state.isAuthenticated
 })
 
 export default connect(MapPropsToState)(App);
