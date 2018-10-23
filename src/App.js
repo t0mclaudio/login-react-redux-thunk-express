@@ -3,6 +3,9 @@ import Login from './Login';
 import ProfilePage from './Profile';
 
 class App extends Component {
+  state = {
+    isAuthenticated: false
+  }
   render() {
     return (
       <div className="App">
