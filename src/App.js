@@ -8,6 +8,11 @@ class App extends Component {
     isAuthenticated: false
   }
 
+  handleChange(e) {
+    console.log(e.target.name)
+    console.log(e.target.value)
+  }
+
   handleLogOut () {
     this.setState({isAuthenticated: false})
   }
@@ -16,12 +21,16 @@ class App extends Component {
     console.log("I've been clicked")
   }
 
+
   render() {
     return (
       <div className="App">
         {this.state.isAuthenticated ? 
         <Profile handleLogOut={e => this.handleLogOut()} /> : 
-        <Login data={this.props} handleLogIn={data => this.handleLogIn(data) } /> }
+        <Login 
+          data={this.props} 
+          handleLogIn={data => this.handleLogIn(data) } 
+          handleChange={e => this.handleChange(e)} /> }
       </div>
     );
   }
