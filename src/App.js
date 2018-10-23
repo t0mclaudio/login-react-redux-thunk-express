@@ -6,10 +6,15 @@ class App extends Component {
   state = {
     isAuthenticated: false
   }
+
+  handleLogOut () {
+    this.setState({isAuthenticated: false})
+  }
+  
   render() {
     return (
       <div className="App">
-        {this.state.isAuthenticated ? <Profile /> : <Login /> }
+        {this.state.isAuthenticated ? <Profile handleLogOut={e => this.handleLogOut()} /> : <Login /> }
       </div>
     );
   }

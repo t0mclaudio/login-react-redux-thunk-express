@@ -5,6 +5,7 @@ const Profile = props => {
     <div>
       <h1>Name: Tom Claudio</h1>
       <h2>Title: Software Developer</h2>
+      <button onClick={props.handleLogOut}>Log out</button>
     </div>
   )
 };
