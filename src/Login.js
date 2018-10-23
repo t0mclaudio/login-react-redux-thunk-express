@@ -1,19 +1,13 @@
 import React, {Component} from 'react';
 
 export default class Login extends Component {
-  state = {
-    username: "",
-    password: "",
-    keepLoggedIn: false
-  }
-
   handleLogIn(e) {
     e.preventDefault()
-    return this.state
+    this.props.handleLogIn()
   }
 
-  toggleKeepLoggedIn () {
-    this.setState({keepLoggedIn: !this.state.keepLoggedIn})
+  toggleKeepLoggedIn(e) {
+    this.handleLogIn(e)
   }
   
   render() {
@@ -21,14 +15,14 @@ export default class Login extends Component {
       <form onSubmit={e => this.handleLogIn(e)}>
         <div>
           <label htmlFor="username">Username</label>
-          <input type="text" name="username" value={this.state.username} onChange={e => this.setState({username: e.target.value})} />
+          <input type="text" name="username" value={this.props.data.username} onChange={e => this.setState({username: e.target.value})} />
         </div>
         <div>
           <label htmlFor="password">Password</label>
-          <input type="password" name="password" value={this.state.password} onChange={e => this.setState({password: e.target.value})}/>
+          <input type="password" name="password" value={this.props.data.password} onChange={e => this.setState({password: e.target.value})}/>
         </div>
         <div>  
-          <input type="checkbox" name="keepLoggedIn" id="keepLoggedIn" checked={this.state.keepLoggedIn} onChange={e => this.toggleKeepLoggedIn()}/>
+          <input type="checkbox" name="keepLoggedIn" id="keepLoggedIn" checked={this.props.data.keepLoggedIn} onChange={e => this.toggleKeepLoggedIn(e)}/>
           <label htmlFor="keepLoggedIn">Keep Logged in</label>
         </div>
         <div>
