@@ -21,7 +21,7 @@ function reducer(state=initialState, action) {
     case "LOGIN":
       return {...state, isAuthenticated: true}  
     case "LOGOUT":
-    return {...state, isAuthenticated: false}    
+      return {...state, isAuthenticated: false}    
     default:
       return state;
   }
