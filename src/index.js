@@ -18,6 +18,8 @@ function reducer(state=initialState, action) {
         return {...state, [action.name]:!state.keepLoggedIn}
       }
       return {...state, [action.name]:action.value}
+    case "LOGIN":
+      return {...state, isAuthenticated: true}  
     default:
       return state;
   }

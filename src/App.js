@@ -4,10 +4,6 @@ import Login from './Login';
 import Profile from './Profile';
 
 class App extends Component {
-  state = {
-    isAuthenticated: false
-  }
-
   handleChange(e) {
     this.props.dispatch({
       type: "CHANGE", 
@@ -21,14 +17,16 @@ class App extends Component {
   }
 
   handleLogIn() {
-    console.log("I've been clicked")
+    this.props.dispatch({
+      type: "LOGIN"
+    })
   }
 
 
   render() {
     return (
       <div className="App">
-        {this.state.isAuthenticated ? 
+        {this.props.isAuthenticated ? 
         <Profile handleLogOut={e => this.handleLogOut()} /> : 
         <Login 
           data={this.props} 
