@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Login from './Login';
 import Profile from './Profile';
 
@@ -22,4 +23,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const MapPropsToState = state => ({
+  data: state.data
+})
+
+export default connect(MapPropsToState)(App);
