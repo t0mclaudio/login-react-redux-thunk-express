@@ -20,6 +20,8 @@ function reducer(state=initialState, action) {
       return {...state, [action.name]:action.value}
     case "LOGIN":
       return {...state, isAuthenticated: true}  
+    case "LOGOUT":
+    return {...state, isAuthenticated: false}    
     default:
       return state;
   }

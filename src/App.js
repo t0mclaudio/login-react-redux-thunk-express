@@ -13,7 +13,9 @@ class App extends Component {
   }
 
   handleLogOut () {
-    this.setState({isAuthenticated: false})
+    this.props.dispatch({
+      type: "LOGOUT"
+    })
   }
 
   handleLogIn() {
