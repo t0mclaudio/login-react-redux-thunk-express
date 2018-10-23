@@ -12,7 +12,15 @@ const initialState = {
 }
 
 function reducer(state=initialState, action) {
-  console.log(state)
+  switch(action.type) {
+    case "CHANGE":
+      if (action.name=="keepLoggedIn") {
+        return {...state, [action.name]:!state.keepLoggedIn}
+      }
+      return {...state, [action.name]:action.value}
+    default:
+      return state;
+  }
   return state;
 }
 
