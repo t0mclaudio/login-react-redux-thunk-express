@@ -6,10 +6,17 @@ export default class Login extends Component {
     password: "",
     keepLoggedIn: false
   }
+
+  handleLogIn(e) {
+    e.preventDefault()
+    console.log("LogIn was submitted")
+    console.log(this.state)
+    return this.state
+  }
   
   render() {
     return (
-      <form>
+      <form onSubmit={e => this.handleLogIn(e)}>
         <div>
           <label htmlFor="username">Username</label>
           <input type="text" name="username" value={this.state.username} onChange={e => this.setState({username: e.target.value})} />
