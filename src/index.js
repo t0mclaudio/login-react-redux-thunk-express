@@ -6,10 +6,15 @@ import { Provider } from "react-redux";
 
 const store = createStore(reducer);
 
-function reducer(state, action) {
-  return {
-    data: null
-  }
+const initialState = {
+  username: "",
+  password: "",
+  keepLoggedIn: false,
+  isAuthenticated: false
+}
+
+function reducer(state=initialState, action) {
+  return state;
 }
 
 const Application = () => {
